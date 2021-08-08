@@ -5,6 +5,21 @@
 //5) При клике на Stop время должно остановиться
 //6) При клике на Start время должно продолжить свой ход (скачек времени, это нормально)
 
+
+const myTitle = document.createElement('div');
+myTitle.innerHTML = "<h1 id='txt'></h1>";
+document.body.appendChild(myTitle);
+
+const myDiv = document.createElement('div');
+myDiv.innerHTML = "<button id='start-btn'>Start</button>" + "<button id='stop-btn'>Stop</button>";
+document.body.appendChild(myDiv);
+
+const btnStart = document.querySelector("button:first-child");
+const btnStop = document.querySelector("button:last-child");
+
+btnStart.addEventListener("click", startTime);
+btnStop.addEventListener("click", stop);
+
 function checkTime(i)
 {
     if (i<10)
@@ -33,6 +48,7 @@ function startTime()
         clearInterval(tm);
     });
 }
+
 startTime();
 
 
