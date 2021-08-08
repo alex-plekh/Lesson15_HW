@@ -14,12 +14,6 @@ const myDiv = document.createElement('div');
 myDiv.innerHTML = "<button id='start-btn'>Start</button>" + "<button id='stop-btn'>Stop</button>";
 document.body.appendChild(myDiv);
 
-const btnStart = document.querySelector("button:first-child");
-const btnStop = document.querySelector("button:last-child");
-
-btnStart.addEventListener("click", startTime);
-btnStop.addEventListener("click", stop);
-
 function checkTime(i)
 {
     if (i<10)
